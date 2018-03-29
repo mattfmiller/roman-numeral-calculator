@@ -8,12 +8,16 @@ function romanNumeralConverter(number) {
       for (var j = 0; j < parseInt(numArray[i]); j++) {
         romanNumeral += numerals[0];
       }
-    } else if (5 <= parseInt(numArray[i]) < 9) {
+    } else if (parseInt(numArray[i]) < 9 && parseInt(numArray[i]) >= 5) {
       romanNumeral += numerals[1];
       for (var j = 0; j < parseInt(numArray[i])-5; j++) {
         romanNumeral += numerals[0];
       }
-    } else if (number === 10) {
+    } else if (parseInt(numArray[i]) === 4) {
+      romanNumeral += numerals[0] + numerals[1];
+    } else if(parseInt(numArray[i]) === 9) {
+      romanNumeral = numerals[0] + numerals[2];
+    } else if (number[i] === 10) {
       return "X";
     } else if (number === 50) {
       return "L";
