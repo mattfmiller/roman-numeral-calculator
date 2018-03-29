@@ -7,12 +7,12 @@
 ## Description
 
 _This app takes a number input by the user and converts it to a roman numeral._
-* _For 1, 5, 10, 50, 100 ,..., the program will output I, V, X, L,C, ..._
+* _For 1, 10,  100 ,..., the program will output I, X, C, ..._
 * _For multiples of 1 up to 3, the program will show the multiple number of I numerals._
-* _For 4, the program will output 5-1 as IV_
-* _For 9, the program will output 10-1 as IX_
-* _For 40, the program will output 50-10 as XL_
-* _For 90, the program will output 100-10 as XC_
+* _For  5, 50,  500 ,..., the program will output V, L, D, ..._
+* _For 6-8, the program will show VI, VII, VIII._
+* _For 4, 40, 400 the program will output 5-1 as IV, XL, CD_
+* _For 9, 90, 900 the program will output 10-1 as IX, XC, CM_
 
 ## Setup/Installation Requirements
 

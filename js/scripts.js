@@ -22,7 +22,16 @@ function romanNumeralConverter(number) {
   }
   var romanNumeralArray = romanNumeral.split("").reverse();
   var outputRomanNumeral = romanNumeralArray.join("");
-  console.log(outputRomanNumeral);
+  return outputRomanNumeral;
 }
 
-//
+//User Logic
+$(function() {
+  $("#form").submit(function(event) {
+    event.preventDefault();
+    var userInput = $("#userInput").val();
+    var outputString = romanNumeralConverter(userInput);
+    $("#output p").text(outputString);
+    $("#output").show();
+  });
+});
