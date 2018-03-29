@@ -1,25 +1,26 @@
 function romanNumeralConverter(number) {
-  // var numeralOne = I;
-  if (number === 1) {
-    return "I";
-    console.log("I");
-  } else if (number === 5) {
-    return "V";
-    console.log("V");
-  } else if (number === 10) {
-    return "X";
-    console.log("X");
-  } else if (number === 50) {
-    return "L";
-    console.log("L");
-  } else if (number === 100) {
-    return "C";
-    console.log("C");
-  } else if (number === 500) {
-    return "D";
-    console.log("D");
-  } else if (number === 1000) {
-    return "M";
-    console.log("M");
+  var numerals = ["I", "V", "X", "L", "C", "D", "M"];
+  var romanNumeral = "";
+  var numArray = number.toString().split('').reverse();
+  console.log(numArray);
+  for (var i = 0; i < numArray.length; i++) {
+    if (parseInt(numArray[i]) < 4) {
+      for (var j = 0; j < parseInt(numArray[i]); j++) {
+        romanNumeral += numerals[0];
+      }
+    } else if (number === 5) {
+      return "V";
+    } else if (number === 10) {
+      return "X";
+    } else if (number === 50) {
+      return "L";
+    } else if (number === 100) {
+      return "C";
+    } else if (number === 500) {
+      return "D";
+    } else if (number === 1000) {
+      return "M";
+    }
   }
+  console.log(romanNumeral);
 }
